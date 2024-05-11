@@ -1,0 +1,69 @@
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.csproj.AssemblyReference.cache
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfoInputs.cache
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfo.cs
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\appsettings.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.exe
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.deps.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.runtimeconfig.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.pdb
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.ToDoList.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.build.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\scopedcss\bundle\ToDoList.styles.css
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.csproj.Up2Date
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\refint\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.pdb
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ToDoList.genruntimeconfig.cache
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\obj\Debug\net8.0\ref\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\backend\ToDoList\bin\Debug\net8.0\ToDoList.staticwebassets.runtime.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\appsettings.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.staticwebassets.runtime.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.exe
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.deps.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.runtimeconfig.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\ToDoList.pdb
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.csproj.AssemblyReference.cache
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfoInputs.cache
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.AssemblyInfo.cs
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.sourcelink.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.ToDoList.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.build.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ToDoList.props
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\scopedcss\bundle\ToDoList.styles.css
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.csproj.Up2Date
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\refint\ToDoList.dll
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.pdb
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ToDoList.genruntimeconfig.cache
+C:\Users\Pichau\Documents\Stacio Industries\MTP\Test 01\ToDoList\obj\Debug\net8.0\ref\ToDoList.dll
