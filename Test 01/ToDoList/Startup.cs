@@ -15,7 +15,6 @@ namespace ToDoList
 
         public IConfiguration Configuration { get; }
 
-        // Este método é chamado em tempo de execução. Use este método para adicionar serviços ao contêiner.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -29,7 +28,6 @@ namespace ToDoList
             });
         }
 
-        // Este método é chamado em tempo de execução. Use este método para configurar o pipeline de solicitação HTTP.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
