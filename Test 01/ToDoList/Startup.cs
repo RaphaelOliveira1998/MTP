@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using ToDoList.Data;
 
 namespace ToDoList
 {
@@ -26,6 +28,8 @@ namespace ToDoList
                         builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                     });
             });
+            services.AddDbContext<TaskContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

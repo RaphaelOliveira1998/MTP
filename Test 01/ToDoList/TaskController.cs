@@ -1,5 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ToDoList.Data;
+using TaskModel = ToDoList.Models.Task; // Use an alias for your custom Task class
 
 namespace ToDoList.Controllers
 {
@@ -7,33 +12,55 @@ namespace ToDoList.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        private static List<string> tasks = new List<string>();
+        private readonly TaskContext _context;
+
+        public TaskController(TaskContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetTasks()
+        public async Task<ActionResult<IEnumerable<TaskModel>>> GetTasks() // Use the alias here
         {
-            return tasks;
+            return await _context.Tasks.ToListAsync();
         }
 
         [HttpPost]
-        public ActionResult AddTask([FromBody] string task)
+        public async Task<ActionResult<TaskModel>> AddTask(TaskModel task) // And here
         {
-            tasks.Add(task);
-            return Ok();
+            _context.Tasks.Add(task);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetTasks), new { id = task.Id }, task);
         }
 
-        [HttpDelete("{index}")]
-        public ActionResult DeleteTask(int index)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTask(int id)
         {
-            if (index >= 0 && index < tasks.Count)
-            {
-                tasks.RemoveAt(index);
-                return Ok();
-            }
-            else
+            var task = await _context.Tasks.FindAsync(id);
+            if (task == null)
             {
                 return NotFound();
             }
+
+            _context.Tasks.Remove(task);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateTask(int id, TaskModel task) // And here
+        {
+            if (id != task.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(task).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

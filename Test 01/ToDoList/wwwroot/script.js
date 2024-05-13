@@ -1,76 +1,107 @@
-document.addEventListener("DOMContentLoaded", function () {
-    loadTasks();
-});
-
-function loadTasks() {
-    fetch('/api/Task')
-        .then(response => response.json())
-        .then(tasks => renderTasks(tasks))
-        .catch(error => console.error('Failed to fetch tasks:', error));
-}
-
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
 
     if (taskText !== '') {
+        var task = {
+            name: taskText,
+            isComplete: false
+        };
+
         fetch('/api/Task', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(taskText)
+            body: JSON.stringify(task)
         })
-        .then(() => {
+        .then(response => {
+            if (!response.ok) {
+                return response.text().then(text => {
+                    throw new Error(`Failed to add task: ${text}`);
+                });
+            }
             taskInput.value = '';
             loadTasks();
         })
-        .catch(error => console.error('Failed to add task:', error));
+        .catch(error => console.error(error));
     }
 }
 
-function deleteTask(index) {
-    fetch(`/api/Task/${index}`, {
+function deleteTask(taskId) {
+    fetch(`/api/Task/${taskId}`, {
         method: 'DELETE'
     })
-    .then(() => loadTasks())
-    .catch(error => console.error('Failed to delete task:', error));
-}
-
-function toggleTask(index) {
-    fetch(`/api/Task/${index}`, {
-        method: 'PUT'
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to delete task: ${response.statusText}`);
+        }
+        loadTasks();
     })
-    .then(() => loadTasks())
-    .catch(error => console.error('Failed to toggle task:', error));
+    .catch(error => console.error(error));
 }
 
-function renderTasks(tasks) {
+function loadTasks() {
+    console.log('loadTasks called');
     const taskList = document.getElementById('taskList');
-    taskList.innerHTML = '';
+    console.log('taskList:', taskList);
+    if (taskList) {
+        taskList.innerHTML = '';
+        console.log('taskList cleared');
+        console.log('Fetching tasks');
+        fetch('/api/Task')
+            .then(response => {
+                console.log('Response received');
+                if (!response.ok) {
+                    throw new Error(`Failed to load tasks: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(tasks => {
+                console.log('Tasks received:', tasks);
+                for (let task of tasks) {
+                    const taskContainer = document.createElement('div');
+                    taskContainer.classList.add('task-container');
 
-    tasks.forEach((task, index) => {
-        const li = document.createElement('li');
-        
-        const taskContainer = document.createElement('div');
-        taskContainer.classList.add('task-container');
+                    const listItem = document.createElement('li');
+                    listItem.textContent = task.name;
+                    listItem.classList.add(task.isComplete ? 'complete' : 'incomplete');
 
-        const taskText = document.createElement('span');
-        taskText.textContent = task;
-        taskContainer.appendChild(taskText);
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.classList.add('delete-button');
+                    deleteButton.addEventListener('click', () => deleteTask(task.id));
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('delete-button');
-        deleteButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            deleteTask(index);
-        });
-        taskContainer.appendChild(deleteButton);
+                    taskContainer.appendChild(listItem);
+                    taskContainer.appendChild(deleteButton);
 
-        li.appendChild(taskContainer);
-        li.addEventListener('click', () => toggleTask(index));
-        
-        taskList.appendChild(li);
-    });
+                    taskList.appendChild(taskContainer);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
 }
+
+function toggleTask(taskId, isComplete) {
+    var task = {
+        id: taskId,
+        isComplete: !isComplete
+    };
+
+    fetch(`/api/Task/${taskId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(task)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to toggle task: ${response.statusText}`);
+        }
+        loadTasks();
+    })
+    .catch(error => console.error(error));
+}
+
+window.onload = loadTasks;
