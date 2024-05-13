@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
+using System.IO;
 
 namespace ToDoList
 {
@@ -19,6 +20,18 @@ namespace ToDoList
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables();
+            var configuration = builder.Build();
+
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            connectionString = connectionString.Replace("localhost\\SQLEXPRESS", configuration["DB_SERVER"]);
+            connectionString = connectionString.Replace("master", configuration["DB_NAME"]);
+            connectionString = connectionString.Replace("True", configuration["DB_TRUSTED_CONNECTION"]);
+            connectionString = connectionString.Replace("False", configuration["DB_ENCRYPT"]);
+
             services.AddControllers();
             services.AddCors(options =>
             {
@@ -29,7 +42,7 @@ namespace ToDoList
                     });
             });
             services.AddDbContext<TaskContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionString));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
