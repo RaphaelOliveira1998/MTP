@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ToDoList.Data;
-using TaskModel = ToDoList.Models.Task; // Use an alias for your custom Task class
+using TaskModel = ToDoList.Models.Task;
 
 namespace ToDoList.Controllers
 {
@@ -20,13 +20,13 @@ namespace ToDoList.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TaskModel>>> GetTasks() // Use the alias here
+        public async Task<ActionResult<IEnumerable<TaskModel>>> GetTasks()
         {
             return await _context.Tasks.ToListAsync();
         }
 
         [HttpPost]
-        public async Task<ActionResult<TaskModel>> AddTask(TaskModel task) // And here
+        public async Task<ActionResult<TaskModel>> AddTask(TaskModel task)
         {
             _context.Tasks.Add(task);
             await _context.SaveChangesAsync();
@@ -50,7 +50,7 @@ namespace ToDoList.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTask(int id, TaskModel task) // And here
+        public async Task<IActionResult> UpdateTask(int id, TaskModel task)
         {
             if (id != task.Id)
             {
