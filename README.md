@@ -9,9 +9,7 @@ Este é um guia passo a passo para configurar e executar o projeto na sua máqui
 
 #Pré-requisitos
 
-.NET Core SDK
-SQL Server Express
-Git
+.NET Core SDK, SQL Server Express, Git
 
 
 #Passos para a configuração
